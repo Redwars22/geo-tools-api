@@ -1,13 +1,22 @@
-# GitHub Codespaces ♥️ Express
+# Geo Tools
 
-Welcome to your shiny new Codespace running Express! We've got everything fired up and running for you to explore Express.
+## Density
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
-
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
-
-To run this application:
-
+```bash
+curl -X POST http://localhost:3000/density \
+  -H "Content-Type: application/json" \
+  -d '{"population": 100000, "area": 50}'
 ```
-npm start
+
+area in km²
+
+## Scale
+
+map distance = cm
+real distance = km
+
+```bash
+curl -X POST http://localhost:3000/scale \
+  -H "Content-Type: application/json" \
+  -d '{"map_distance": 2, "real_distance": 10}'
 ```
